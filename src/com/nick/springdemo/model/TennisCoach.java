@@ -10,6 +10,7 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fs;
 
+	//	Constructor injection
 	@Autowired
 	public TennisCoach(FortuneService fs) {
 		this.fs = fs;
