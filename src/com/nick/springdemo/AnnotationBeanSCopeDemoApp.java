@@ -13,7 +13,11 @@ public class AnnotationBeanSCopeDemoApp {
 
 		Coach alphaCoach = context.getBean("tennisCoach", Coach.class);
 
+		Coach trackCoach = context.getBean("trackCoach", Coach.class);
+
 		System.out.println("Comparison:" +(coach==alphaCoach));
+
+		System.out.println("\n"+trackCoach.getDailyWorkout());
 
 		context.close();
 	}
