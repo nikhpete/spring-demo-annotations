@@ -2,12 +2,12 @@ package com.nick.springdemo.model;
 
 import org.springframework.stereotype.Component;
 
-@Component()
-public class TennisCoach implements Coach {
+@Component("someCoach")
+public class VolleyBallCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-		return "Practise your backhand vollley";
+		return "Kicking the ball";
 	}
 
 }
