@@ -6,20 +6,16 @@ import org.springframework.stereotype.Component;
 import com.nick.springdemo.service.FortuneService;
 
 @Component
-public class CricketCoach implements Coach {
+public class TrackCoach implements Coach {
 
-	private FortuneService fs;
-
-	// method injection
+	//field injection
 	@Autowired
-	public void doMyStuff(FortuneService fs) {
-		this.fs = fs;
-	}
+	private FortuneService fs;
 
 	@Override
 	public String getDailyWorkout() {
 		System.out.println(fs.getFortune());
-		return "try out helicopter shots";
+		return "Run along 5k";
 	}
 
 }

@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class VolleyBallCoach implements Coach {
 
-	FortuneService fs;
+	private FortuneService fs;
 
 	// setter injection
 	@Autowired
