@@ -1,6 +1,7 @@
 package com.nick.springdemo.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.nick.springdemo.service.FortuneService;
@@ -12,7 +13,7 @@ public class TennisCoach implements Coach {
 
 	//	Constructor injection
 	@Autowired
-	public TennisCoach(FortuneService fs) {
+	public TennisCoach(@Qualifier("happyFortuneService")FortuneService fs) {
 		this.fs = fs;
 	}
 

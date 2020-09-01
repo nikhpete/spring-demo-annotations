@@ -1,6 +1,7 @@
 package com.nick.springdemo.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.nick.springdemo.service.FortuneService;
@@ -12,7 +13,7 @@ public class CricketCoach implements Coach {
 
 	// method injection
 	@Autowired
-	public void doMyStuff(FortuneService fs) {
+	public void doMyStuff(@Qualifier("randomFortuneService")FortuneService fs) {
 		this.fs = fs;
 	}
 
